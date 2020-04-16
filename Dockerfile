@@ -40,7 +40,8 @@ WORKDIR /docker_firefox
 
 SHELL ["/bin/bash", "-c"]
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends $DEPS && \
+    dpkg-reconfigure debconf --frontend=noninteractive && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends $DEPS && \
     wget -q https://ftp.mozilla.org/pub/firefox/releases/74.0/linux-x86_64/en-US/firefox-74.0.tar.bz2 && \
     tar -xjf firefox-74.0.tar.bz2 && \
     apt-get clean && \
