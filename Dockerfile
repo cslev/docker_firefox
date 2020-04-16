@@ -33,7 +33,8 @@ ENV DEPS  lsb-release \
           libxt6 \
           tar \
           bzip2 \
-          wget
+          wget \
+          ca-certificates
 
 COPY source /docker_firefox
 WORKDIR /docker_firefox
