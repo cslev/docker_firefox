@@ -34,7 +34,10 @@ ENV DEPS  lsb-release \
           tar \
           bzip2 \
           wget \
-          ca-certificates
+          ca-certificates \
+          xterm \
+          net-tools \
+          x11-apps
 
 COPY source /docker_firefox
 WORKDIR /docker_firefox
