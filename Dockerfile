@@ -54,4 +54,5 @@ RUN apt-get update && \
     source /root/.bashrc
 
 # We start the script automatically
-ENTRYPOINT ["/docker_firefox/firefox/firefox"]
+#ENTRYPOINT ["/docker_firefox/firefox/firefox"]
+ENTRYPOINT ["bash -c"]
