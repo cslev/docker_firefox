@@ -33,7 +33,7 @@ ENV DEPS  lsb-release \
           libxt6 \
           tar \
           bzip2 \
-          wget 
+          wget
 
 COPY source /docker_firefox
 WORKDIR /docker_firefox
@@ -41,7 +41,7 @@ WORKDIR /docker_firefox
 SHELL ["/bin/bash", "-c"]
 RUN apt-get update && \
     apt-get install -y --no-install-recommends $DEPS && \
-    wget -q https://ftp.mozilla.org/pub/firefox/releases/74.0/linux-x86_64/en-US/firefox-74.0.tar.bz2
+    wget -q https://ftp.mozilla.org/pub/firefox/releases/74.0/linux-x86_64/en-US/firefox-74.0.tar.bz2 && \
     tar -xjf firefox-74.0.tar.bz2 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
