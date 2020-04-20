@@ -20,6 +20,12 @@ Here, we need to pass some local X11 variables and files to the container to mak
 ```
 sudo docker run --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw" docker_firefox
 ```
+If Firefox does not show up, run any other x11-apps (for testing) or xterm and run firefox within xterm.
+```
+sudo docker run --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw" docker_firefox xterm
+/docker_firefox/firefox/firefox
+
+```
 
 ## Possible errors
 There are good descriptions and comments [here](https://medium.com/@SaravSun/running-gui-applications-inside-docker-containers-83d65c0db110)
