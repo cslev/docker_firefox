@@ -18,7 +18,16 @@ sudo docker build -t docker_firefox .
 # Run image with GUI
 Here, we need to pass some local X11 variables and files to the container to make it able to run GUI apps
 ```
-sudo docker run --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw" docker_firefox
+sudo docker run --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw" docker_firefox /docker_firefox/firefox/firefox
+```
+
+If Firefox does not show up, run any other x11-apps (for testing) or `xterm` and run `firefox` within `xterm`.
+```
+$ sudo docker run --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw" docker_firefox xterm
+
+in xterm:
+$ /docker_firefox/firefox/firefox
+
 ```
 
 ## Possible errors
