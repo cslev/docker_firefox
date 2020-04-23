@@ -37,7 +37,8 @@ ENV DEPS  lsb-release \
           ca-certificates \
           xterm \
           net-tools \
-          x11-apps
+          x11-apps \
+          ethtool
 
 COPY source /docker_firefox
 WORKDIR /docker_firefox
