@@ -37,6 +37,7 @@ export PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin
 
 #for firefox
 export PATH=$PATH:/docker_firefox/firefox/
+export PATH=$PATH:/docker_firefox/
 
 #exporting SSL related ENV variables for firefox
 #export SSLKEYLOGFILE=/docker_firefox/ssl-key.log
