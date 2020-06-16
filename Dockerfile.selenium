@@ -39,7 +39,10 @@ ENV DEPS  lsb-release \
           net-tools \
           x11-apps \
           ethtool \
-          python3-selenium
+          python3-selenium \
+          procps \
+          nano \
+          python3-pandas
 
 COPY source /docker_firefox
 WORKDIR /docker_firefox

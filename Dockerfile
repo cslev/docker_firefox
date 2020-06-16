@@ -38,7 +38,9 @@ ENV DEPS  lsb-release \
           xterm \
           net-tools \
           x11-apps \
-          ethtool
+          ethtool \
+          procps \
+          nano
 
 COPY source /docker_firefox
 WORKDIR /docker_firefox
